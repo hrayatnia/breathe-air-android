@@ -14,13 +14,13 @@ class ServiceGenerator {
         fun getBreatheAirService(): BreatheAirService {
 
             val builder = Retrofit.Builder()
-                .baseUrl(BreatheAirService.BASE_URL)
+                .baseUrl(BreatheAirService.API_ROOT)
                 .addConverterFactory(GsonConverterFactory.create())
 
             val retrofit = builder.build()
 
             // define interceptors.
-            // define custom okhttp client.
+            // define custom okHttp client.
 
             // add the interceptor and custom okhttp client.
             return retrofit.create(BreatheAirService::class.java)
