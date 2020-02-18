@@ -12,11 +12,11 @@ import retrofit2.http.POST
 
 interface BreatheAirService {
 
-    @POST("/location")
+    @POST("location")
     suspend fun getData(@Body requestBody: GetWeatherDataPostRequestBody): Response<StationData>
 
     companion object {
         const val BASE_URL = "https://breatherair.herokuapp.com"
-        const val API_ROOT = "$BASE_URL/api"
+        const val API_ROOT = "$BASE_URL/api/"
     }
 }
