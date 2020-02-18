@@ -12,8 +12,6 @@ class MainViewModel : ViewModel() {
 
     private val stationDataRepository = StationDataRepository()
 
-    private lateinit var stationData: LiveData<StationData>
-
     fun getStationData(lat: String, lang: String): LiveData<StationData> {
 
         val liveStationData = MutableLiveData<StationData>()
